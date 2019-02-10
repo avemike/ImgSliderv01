@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .slider {
+        width: 85vw;
+        position: relative;
+        overflow: hidden;
+        .slider-wrapper {
+            position: relative;
+            left: calc(50% - 100px - 2vw);
+            width: fit-content;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            transition: all .6s ease-out;
+            .card {
+                width: 200px;
+                height: 200px;
+
+                margin: 0 2vw;
+                transition: all 1s;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }            
+        }
+        @for $i from 0 through 6 {
+            .active-slide-#{$i} .card-#{$i} {
+                opacity: 1;
+                width: 300px;                
+                height: 300px;
+                margin: 0 0vw;
+
+            }
+        }
+    }
+}
