@@ -19,7 +19,7 @@ export default class Slider extends Component {
                     alt="" 
                 />
             </div>
-            
+
         )
     }
 }

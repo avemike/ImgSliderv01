@@ -6,11 +6,11 @@ import './scss/general.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="container-mine">
         <Slider 
           list={data.cards}
         />
-      </div>  
+      </div>
     );
   }
 }

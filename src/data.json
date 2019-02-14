@@ -2,28 +2,43 @@
     "cards": [
         {
             "title": "First card",
-            "img_src": "https://picsum.photos/310/300",
+            "img_src": "https://picsum.photos/420/415",
             "id": "01"
         },
         {
             "title": "Second card",
-            "img_src": "https://picsum.photos/310/310",
+            "img_src": "https://picsum.photos/420/420",
             "id": "02"
         },
         {
             "title": "Third card",
-            "img_src": "https://picsum.photos/300/300",
+            "img_src": "https://picsum.photos/415/415",
             "id": "03"
         },
         {
             "title": "Fourth card",
-            "img_src": "https://picsum.photos/305/300",            
+            "img_src": "https://picsum.photos/435/415",            
             "id": "04"
         },
         {
             "title": "Fifth card",
-            "img_src": "https://picsum.photos/305/305",            
+            "img_src": "https://picsum.photos/425/425",            
             "id": "05"
+        },
+        {
+            "title": "Sixth card",
+            "img_src": "https://picsum.photos/420/4125",
+            "id": "06"
+        },
+        {
+            "title": "Seventh card",
+            "img_src": "https://picsum.photos/435/445",            
+            "id": "07"
+        },
+        {
+            "title": "Eighth card",
+            "img_src": "https://picsum.photos/445/445",            
+            "id": "08"
         }
     ]
 }

@@ -2,44 +2,72 @@
     padding: 0;
     margin: 0;
 }
+$s-card-size: 220px;
+$m-card-size: 300px;
+$b-card-size: 460px;
+
 body {
     width: 100vw;
     height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .slider {
-        width: 85vw;
-        position: relative;
-        overflow: hidden;
-        .slider-wrapper {
+    overflow: hidden;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    .container-mine {
+        width: 100vw;
+        margin: auto;
+        display: block;
+        margin: 0 auto;
+        .slider {
+            width: 100%;
             position: relative;
-            left: calc(50% - 100px - 2vw);
-            width: fit-content;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            transition: all .6s ease-out;
-            .card {
-                width: 200px;
-                height: 200px;
+            overflow: hidden;
+            .slider-wrapper {
+                position: relative;
+                min-height: 600px;
+                // padding: 1em 2em;
+                left: calc(50% - #{$b-card-size/2});
+                width: fit-content;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                // transform: translateX(-50%);
+                transition: all .6s ease-out;
+                .card {
+                    width: $s-card-size;
+                    height: $s-card-size;
+                    margin: 0 2vw;
+                    transition: all 1s;
+                    img {
+                        box-shadow: 0 6px 21px -7px black; 
+                        width: 100%;
+                        height: 100%;
+                        transition: box-shadow .6s ease-out;
+                    }
+                }            
+            }
+            @for $i from 0 through 10 {
+                $near-l: $i - 1;
+                $near-r: $i + 1;
 
-                margin: 0 2vw;
-                transition: all 1s;
-                img {
-                    width: 100%;
-                    height: 100%;
+                .active-slide-#{$i} .card-#{$i} {
+                    opacity: 1;
+                    width: $b-card-size;                
+                    height: $b-card-size;
+                    margin: 0 0vw;       
+                    img {
+                        box-shadow:0px 15px 30px -13px #000000; 
+                    } 
                 }
-            }            
-        }
-        @for $i from 0 through 6 {
-            .active-slide-#{$i} .card-#{$i} {
-                opacity: 1;
-                width: 300px;                
-                height: 300px;
-                margin: 0 0vw;
-
+                .active-slide-#{$i} .card-#{$near-l}, .active-slide-#{$i} .card-#{$near-r} {
+                    opacity: 1;
+                    width: $m-card-size;
+                    height: $m-card-size;
+                    margin: 0 1vw;
+                    img {
+                        box-shadow:0px 7px 25px -9px #000000; 
+                    }
+                }
             }
         }
     }
